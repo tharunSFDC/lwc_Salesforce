@@ -1,0 +1,38 @@
+<!--
+  @description       : 
+  @author            : Tharun panguluru
+  @last modified on  : 12-30-2023
+  @last modified by  : Tharun
+  Modifications Log
+  Ver   Date         Author     Modification
+  1.0   12-30-2023   Tharun   Initial Version
+-->
+<template>
+    <lightning-card title="Search Contact - Wire a Property and Function">
+        <lightning-input type="search" label="Enter the contact search Text" value={serachkey} onchange={handlesearch}>
+
+        </lightning-input>
+        <!--Start - Wire a Property-->
+        <p>*********Wire a Property***************</p>
+       
+        <template if:true={contacts.data}>
+           <template for:each={contacts.data} for:item="con">
+             <p key={con.id}>Name: {con.Name}</p>
+             <p key={con.id}>Phone: {con.Phone}</p>
+             <p key={con.id}>Email: {con.Email}</p>
+             <p key={con.id} >**************************</p>
+           </template>
+        </template>
+           
+        <template if:true={contacts.error}>
+            Sorry we can't display contact records due to the {contacts.error}.
+        </template>
+           <!--End - Wire a Property-->
+
+           <!--Wire a Function-->
+           <p>*******Wire a Function************</p>
+           <template for:each={condata} for:item="cn">
+                <p key={cn.id}> contact Name : {cn.Name}</p>
+           </template>
+    </lightning-card>
+</template>
