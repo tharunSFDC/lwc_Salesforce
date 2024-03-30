@@ -1,0 +1,10 @@
+<template>
+    <p><b>This is Parent Component</b></p>
+    <lightning-card title="Vlc Volume" icon-name="utiliity:desktop">
+        <p><b>{cname}:{vol}</b></p>
+
+        <p><i>This is Child Component</i></p>
+        <c-lwc_event_dec_child onincrease={handlevolinc} ondecrease={handlevoldec}></c-lwc_event_dec_child>
+    </lightning-card>
+    
+</template>

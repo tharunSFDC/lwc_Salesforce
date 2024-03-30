@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <p>====This is Child component</p>
+        <c-Child_record_create onchildhere={showAccounts}></c-Child_record_create>
+    </lightning-card>
+    <lightning-card title="Account Records">
+        <P>======This is parent component</P>
+        <lightning-datatable key-field="id" data={accountvalues} columns={columes}>
+        </lightning-datatable>
+        </lightning-card>
+    
+</template>
