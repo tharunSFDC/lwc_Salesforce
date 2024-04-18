@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Account Records">
+    <template if:true={accounts.data}>
+        <template for:each={accounts.data} for:item="acc">
+            <p key={acc.id}>{acc.Name}</p>
+        </template>
+    </template>
+    
+    </lightning-card>
+  </template>
